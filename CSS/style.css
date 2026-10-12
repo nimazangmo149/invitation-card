@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #071f19, #123f32, #071f19);
+    font-family: Georgia, serif;
+    padding: 25px;
+}
+
+.invitation {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    border: 2px solid #d8b66a;
+    border-radius: 20px;
+    box-shadow: 0 0 35px #d8b66a40;
+    animation: appear 1.2s ease;
+}
+
+.card {
+    border: 1px solid #d8b66a;
+    border-radius: 14px;
+    padding: 45px 25px;
+    text-align: center;
+    color: #fff8e8;
+    background: radial-gradient(circle at top, #245846, transparent 60%), #0b2b22;
+}
+
+.star {
+    color: #f3d58a;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+.small-title {
+    color: #e5c477;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(34px, 7vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    font-weight: normal;
+}
+
+h1 span {
+    color: #e5c477;
+    font-style: italic;
+}
+
+.description {
+    color: #e1e8df;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 420px;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background: #d8b66a;
+    margin: 25px auto;
+}
+
+.groups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.group {
+    border: 1px solid #d8b66a;
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 125px;
+    background: #ffffff08;
+}
+
+.group h2 {
+    color: #f0d38a;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.group p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #e8e2d1;
+}
+
+.plus {
+    font-size: 24px;
+    color: #d8b66a;
+}
+
+.invite-button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f3d58a, #c79b42);
+    color: #143126;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.invite-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #e5c47755;
+}
+
+#details {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    border-top: 1px solid #d8b66a;
+    font-family: Arial, sans-serif;
+    line-height: 2;
+    animation: appear 0.6s ease;
+}
+
+#details strong {
+    color: #f0d38a;
+}
+
+.footer {
+    margin-top: 30px;
+    color: #d8b66a;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #e5c477;
+    }
+
+    to {
+        text-shadow: 0 0 20px #e5c477;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 420px) {
+    .card {
+        padding: 35px 15px;
+    }
+
+    .groups {
+        gap: 8px;
+    }
+
+    .group {
+        min-width: 0;
+        padding: 13px 10px;
+    }
+
+    .group h2 {
+        font-size: 20px;
+    }
+
+    .small-title {
+        letter-spacing: 3px;
+    }
+}
